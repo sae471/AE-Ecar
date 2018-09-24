@@ -5,10 +5,12 @@ import {Routes, RouterModule}from "@angular/router";
 import { HttpModule } from '@angular/http';
 
 import { AppConfig } from './../framework/config/app.config';
+import { AppRoutingModule } from './/app-routing.module';
 
 import { AppComponent } from './layout/app/app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { AdminModule } from './admin/admin.module';
 
 export function initializeApp(appConfig: AppConfig) {
   return () => appConfig.load();
@@ -24,12 +26,14 @@ export function initializeApp(appConfig: AppConfig) {
     BrowserModule,
     HttpModule,
     HttpClientModule,
-    RouterModule.forRoot([
-      { path: 'home', component: HomeComponent },
-      { path: '404', component : NotFoundComponent},
-      { path: '', redirectTo: '/home', pathMatch: 'full' },
-      { path: '**', redirectTo: '/404', pathMatch: 'full'}
-    ])
+    // RouterModule.forRoot([
+    //   { path: 'home', component: HomeComponent },
+    //   { path: '404', component : NotFoundComponent},
+    //   { path: '', redirectTo: '/home', pathMatch: 'full' },
+    //   { path: '**', redirectTo: '/404', pathMatch: 'full'}
+    // ]),
+    AppRoutingModule,
+    AdminModule
   ],
   providers: [
     AppConfig,
