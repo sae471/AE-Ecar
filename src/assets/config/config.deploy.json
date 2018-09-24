@@ -1,0 +1,9 @@
+{
+    "env": {
+    "name": "#{envName}"
+    },
+    "apiServer": {
+    "metadata": "https://#{apiServerPrefix}.demo.com/api/v1.0/",
+    "rule": "https://#{apiServerPrefix}.demo.com/api/v1.0/"
+    }
+}
