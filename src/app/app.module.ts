@@ -10,7 +10,6 @@ import { AppRoutingModule } from './/app-routing.module';
 import { AppComponent } from './layout/app/app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { AdminModule } from './admin/admin.module';
 
 export function initializeApp(appConfig: AppConfig) {
   return () => appConfig.load();
