@@ -31,8 +31,7 @@ export function initializeApp(appConfig: AppConfig) {
     //   { path: '', redirectTo: '/home', pathMatch: 'full' },
     //   { path: '**', redirectTo: '/404', pathMatch: 'full'}
     // ]),
-    AppRoutingModule,
-    AdminModule
+    AppRoutingModule
   ],
   providers: [
     AppConfig,

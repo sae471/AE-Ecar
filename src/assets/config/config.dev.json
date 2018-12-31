@@ -3,7 +3,7 @@
     "name": "DEV"
      },
     "apiServer": {
-    "metadata": "https://metadata.demo.com/api/v1.0/",
+    "metadata": "http://localhost:56125/api",
     "rules": "https://rules.demo.com/api/v1.0/"
     }
 }
